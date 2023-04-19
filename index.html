@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+    Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>LeFigaro</title>
+    <meta name="description" content="LeFigaro">
+    <meta name="author" content="Niccolo' Leoncini">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://via.placeholder.com/40x40.gif?text=icon">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/dropdownMenusStyle.css" type="text/css">
+    <link rel="stylesheet" href="css/footerStyle.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+            integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+            integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div id="banner">
+    <div class="d-none d-lg-block">
+        <div class="container-fluid g-0 upper-banner">
+            <div class="container-xxl upper-banner-container">
+                <div class="row upper-banner-row">
+                    <div class="col-xxl-3 col-xl col-lg g-0 searching-bar">
+                        <a href="#">
+                            <img src="./img/search-13-512.png" alt="lens">
+                            <p>Rechercher</p>
+                        </a>
+                    </div>
+
+                    <div class="col-xxl-6 col-xl-auto col-lg-auto g-0">
+                        <div class="upper-banner-mid-icons">
+                            <a href="#" style="margin-right: auto">Guerre en Ukraine</a>
+                            <a href="#" style="margin-right: auto">Politique</a>
+                            <a href="#" style="margin-right: auto">International</a>
+                            <a href="#" style="margin-right: auto">Société</a>
+                            <a href="#" style="margin-right: auto">Vox</a>
+                            <a href="#" style="margin-right: auto">Économie</a>
+                            <a href="#" style="margin-right: auto">Sport</a>
+                            <a href="#" style="margin-right: auto">Culture</a>
+                            <a href="#" style="margin-right: auto">Voyage</a>
+                            <a href="#" style="margin-right: auto">Style</a>
+                            <a href="#" style="margin-right: auto">Madame</a>
+                            <a href="#" style="margin-right: auto">Vin</a>
+                            <button type="button" title="Voir plus de sites" onclick="toggleDiscoverOurSites()">
+                                <img id="upper-banner-arrow" src="./img/white-arrow-png-41944.png" alt="arrow">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-xxl-3 col-xl col-lg g-0 login-logo">
+                        <a href="#">
+                            <img src="./img/user-48.png" alt="user">
+                            <p>Se connecter</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid upper-dropdown-container-hidden" id="upper-dropdown-container">
+        <div class="container-xxl" id="upper-dropdown-menu">
+            <div id="logo-container">
+                <img class="logo" src="https://via.placeholder.com/867x163?text=logo" alt="logo">
+                <button type="button" onclick="toggleDiscoverOurSites()">
+                    <img src="./img/close.png" alt="x" id="x">
+                </button>
+            </div>
+            <div class="container-xxl g-0 headers">
+                <img class="dash" src="./img/minus.png" alt="dash">
+                <span>Rubriques et services du Figaro</span>
+            </div>
+            <div class="row g-0 rubrics-rows">
+                <div class="col rubrics">
+                    <img class="dash" src="./img/minus.png" alt="dash" style="visibility: hidden; margin-right: 3px;">
+                    <a href="#">Le Figaro Live</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Le Figaro Magazine</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">La Vérification</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Le Figaro Étudiant</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Faits divers</a>
+                </div>
+            </div>
+            <div class="row g-0 rubrics-rows">
+                <div class="col rubrics">
+                    <img class="dash" src="./img/minus.png" alt="dash" style="visibility: hidden; margin-right: 3px;">
+                    <a href="#">Santé</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Sciences</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Fig Data</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Tech et web</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Bourse</a>
+                </div>
+            </div>
+            <div class="row g-0 rubrics-rows">
+                <div class="col rubrics">
+                    <img class="dash" src="./img/minus.png" alt="dash" style="visibility: hidden; margin-right: 3px;">
+                    <a href="#">Le Figaro Immobilier</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Emploi</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Art de vivre</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Automobile</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Langue française</a>
+                </div>
+            </div>
+            <div class="row g-0 rubrics-rows">
+                <div class="col rubrics">
+                    <img class="dash" src="./img/minus.png" alt="dash" style="visibility: hidden; margin-right: 3px;">
+                    <a href="#">Golf</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Histoire</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">TVMag</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Programme TV</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Maison et Jardin</a>
+                </div>
+            </div>
+            <div class="row g-0 rubrics-rows">
+                <div class="col rubrics">
+                    <img class="dash" src="./img/minus.png" alt="dash" style="visibility: hidden; margin-right: 3px;">
+                    <a href="#">Le Figaroscope</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Carnet du jour</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Guide achat</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Services</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">Billetterie</a>
+                </div>
+            </div>
+            <div class="row g-0 rubrics-rows">
+                <div class="col rubrics">
+                    <img class="dash" src="./img/minus.png" alt="dash" style="visibility: hidden; margin-right: 3px;">
+                    <a href="#">Podcasts</a>
+                </div>
+                <div class="col rubrics">
+                    <a href="#">La question du jour</a>
+                </div>
+                <div class="col rubrics"></div>
+                <div class="col rubrics"></div>
+                <div class="col rubrics"></div>
+            </div>
+            <div class="container-xxl g-0 headers">
+                <img class="dash" src="./img/minus.png" alt="dash">
+                <span>Nos journaux et magazines</span>
+            </div>
+            <div class="container-xxl g-0 magazines-container">
+                <img class="dash" src="./img/minus.png" alt="dash" style="visibility: hidden; margin-right: 8px;">
+                <a href="#">
+                    <img src="https://via.placeholder.com/137x204?text=magazine" alt="magazine" class="magazines">
+                </a>
+                <a href="#">
+                    <img src="https://via.placeholder.com/137x204?text=magazine" alt="magazine" class="magazines">
+                </a>
+                <a href="#">
+                    <img src="https://via.placeholder.com/137x204?text=magazine" alt="magazine" class="magazines">
+                </a>
+                <a href="#">
+                    <img src="https://via.placeholder.com/137x204?text=magazine" alt="magazine" class="magazines">
+                </a>
+            </div>
+            <div class="container-xxl g-0 headers">
+                <img class="dash" src="./img/minus.png" alt="dash">
+                <span>Les sites du Groupe Figaro</span>
+            </div>
+            <div class="row g-0 partners-row">
+                <div class="col partners-column">
+                    <img class="dash" src="./img/minus.png" alt="dash" style="visibility: hidden; margin-right: 4px;">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="row g-0 partners-row">
+                <div class="col partners-column">
+                    <img class="dash" src="./img/minus.png" alt="dash" style="visibility: hidden; margin-right: 4px;">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="row g-0 partners-row">
+                <div class="col partners-column">
+                    <img class="dash" src="./img/minus.png" alt="dash" style="visibility: hidden; margin-right: 4px;">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="row g-0 partners-row">
+                <div class="col partners-column">
+                    <img class="dash" src="./img/minus.png" alt="dash" style="visibility: hidden; margin-right: 4px;">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/164x70?text=partner" alt="partner" class="partner-logo">
+                    </a>
+                </div>
+                <div class="col partners-column"></div>
+                <div class="col partners-column"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mid-banner">
+        <div class="container-xxl g-0 mid-banner-container">
+            <div class="row g-0 mid-banner-row">
+                <div class="col-xxl-3 col-xl-3 col-auto g-0 mid-left-banner-container">
+                    <div class="journal-img">
+                        <a href="#" target="_blank">
+                            <img src="https://via.placeholder.com/87x65?text=journal-img"
+                                 alt="journal-img">
+                            <p>Lire le journal</p>
+                        </a>
+                    </div>
+                    <button class="mid-banner-menu" type="button" onclick="toggleSideMenu()">
+                        <img src="./img/menu.png" alt="menu">
+                        Menu
+                    </button>
+                </div>
+                <div class="col-xxl-6 col-xl-6 col g-0 journal-logo">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/867x163?text=logo" alt="logo">
+                    </a>
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-auto g-0 mid-right-banner-container">
+                    <div class="subscribe-button-container">
+                        <a href="#" class="subscribe-button" target="_blank">
+                            <h1>Abonnez-vous</h1>
+                            <p>0,99€ le premier mois</p>
+                        </a>
+                    </div>
+                    <a class="login-logo-mid-banner" href="#">
+                        <img src="./img/blue-user.png" alt="user">
+                        <p>Se connecter</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid lower-banner g-0">
+        <button id="main-page-dropdown-button" type="button" onclick="toggleLocalEditionsDropdownMenu()">
+            Éditions locales
+            <img id="lower-banner-arrow" src="./img/blue-arrow.png" alt="arrow">
+        </button>
+        <a href="#">Podcasts</a>
+        <a href="#">Vidéos</a>
+        <a href="#">Newsletters</a>
+    </div>
+</div>
+
+<div class="container-fluid g-0  dropdown-main-page-container-hidden" id="main-page-dropdown-container">
+    <div class="container-lg container-md container-sm container g-0" id="dropdown-main-page-menu">
+        <a href="#" id="bordeaux-button" onclick="toggleLocalEditionsDropdownMenu()">
+            <img class="dash" src="./img/minus.png" alt="dash">
+            <span>Bordeaux</span>
+        </a>
+        <a href="#" id="lyon-button" onclick="toggleLocalEditionsDropdownMenu()">
+            <img class="dash" src="./img/minus.png" alt="dash">
+            <span>Lyon</span>
+        </a>
+        <a href="#" id="nantes-button" onclick="toggleLocalEditionsDropdownMenu()">
+            <img class="dash" src="./img/minus.png" alt="dash">
+            <span>Nantes</span>
+        </a>
+        <a href="#" id="nice-button" onclick="toggleLocalEditionsDropdownMenu()">
+            <img class="dash" src="./img/minus.png" alt="dash">
+            <span>Nice</span>
+        </a>
+    </div>
+</div>
+
+<div id="menu-container" class="menu-container-hidden">
+    <div id="subscription-menu">
+        <a href="#" target="_blank">
+            <h1>Abonnez-vous</h1>
+            <p>0,99€ le premier mois</p>
+        </a>
+    </div>
+    <div id="research-menu">
+        <a href="#">
+            <img src="./img/search-13-512.png" alt="search">
+            <span>Rechercher</span>
+        </a>
+    </div>
+    <div class="menu-headers-container">
+        <img src="./img/minus.png" class="menu-dash" alt="dash">
+        <h1 class="menu-headers">Nouveau</h1>
+    </div>
+    <a id="whats-new-container" href="#">
+        <img id="whats-new-img" src="https://via.placeholder.com/40x40" alt="img">
+        <div>
+            <h1>Le Figaro Cuisine</h1>
+            <p>5000 recettes exclusives</p>
+        </div>
+        <img id="right-sided-arrow" src="./img/blue-arrow.png" alt="right-sided-arrow">
+    </a>
+    <div class="menu-headers-container">
+        <img src="./img/minus.png" class="menu-dash" alt="dash">
+        <h1 class="menu-headers">Rubriques et services du Figaro</h1>
+    </div>
+    <div class="rubrics-menu-container">
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Guerre en Ukraine</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Le Figaro Magazine</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">La Vérification</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Le Figaro Étudiant</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Faits divers</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Santé</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Sciences</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Fig Data</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Tech et web</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Bourse</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Le Figaro Immobilier</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Emploi</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Art de vivre</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Automobile</span>
+        </a>
+        <a class="rubrics-menu">
+            <span class="rubrics-text">Guerre en Ukraine</span>
+        </a>
+        <a class="rubrics-menu">
+            <span class="rubrics-text">Langue française</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Golf</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Histoire</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">TVMag</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Programme TV</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Maison et Jardin</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Le Figaroscope</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Carnet du jour</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Guide achat</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Services</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Billetterie</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">Podcasts</span>
+        </a>
+        <a href="#" class="rubrics-menu">
+            <span class="rubrics-text">La question du jour</span>
+        </a>
+    </div>
+    <div class="menu-headers-container">
+        <img src="./img/minus.png" class="menu-dash" alt="dash">
+        <h1 class="menu-headers">Nos journaux et magazines</h1>
+    </div>
+    <div class="magazines-menu-container">
+        <a href="#" class="magazines-menu-image">
+            <img src="https://via.placeholder.com/169x204?text=magazine" alt="magazine">
+        </a>
+        <a href="#" class="magazines-menu-image">
+            <img src="https://via.placeholder.com/169x204?text=magazine" alt="magazine">
+        </a>
+        <a href="#" class="magazines-menu-image">
+            <img src="https://via.placeholder.com/169x204?text=magazine" alt="magazine">
+        </a>
+        <a href="#" class="magazines-menu-image">
+            <img src="https://via.placeholder.com/169x204?text=magazine" alt="magazine">
+        </a>
+    </div>
+    <div class="menu-headers-container">
+        <img src="./img/minus.png" class="menu-dash" alt="dash">
+        <h1 class="menu-headers">Les sites du Groupe Figaro</h1>
+    </div>
+    <div class="our-partners-menu-container">
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+        <a href="#" class="our-partners-logo">
+            <img src="https://via.placeholder.com/107x50?text=partners+logo" alt="partner">
+        </a>
+    </div>
+</div>
+
+<div id="black-screen" class="black-screen-hidden"></div>
+
+<div class="container-lg container-md container-sm container main-page-hidden main-page-hidden-show" id="page">
+    <div class="row">
+        <div class="col-lg-3 g-0 order-lg-first order-0 left">
+            <div class="left-article">
+                <p>Category</p>
+                <a href="#">
+                    <h1>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts</h1>
+                    <img src="https://via.placeholder.com/1024x576?text=img" alt="img">
+                </a>
+            </div>
+            <div class="left-article">
+                <p>Category</p>
+                <a href="#">
+                    <h1>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring
+                        which I enjoy with my whole heart</h1>
+                    <img src="https://via.placeholder.com/1024x576?text=img" alt="img">
+                </a>
+            </div>
+            <div class="left-article">
+                <p>Category</p>
+                <a href="#">
+                    <h1>Condimentum dui cubilia eros erat metus conubia. Aptent tristique euismod rutrum adipiscing
+                        curae</h1>
+                    <img src="https://via.placeholder.com/1024x576?text=img" alt="img">
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-6 order-lg-1 order-first g-0 middle">
+            <div class="middle-article" id="first-page">
+                <a href="#">
+                    <h1>Lorem ipsum dolor sit amet</h1>
+                    <img src="https://via.placeholder.com/1024x576?text=img" alt="img">
+                </a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet sem vitae mollis semper.
+                    Integer quis laoreet justo.</p>
+            </div>
+            <div class="middle-article">
+                <a href="#">
+                    <img src="https://via.placeholder.com/1024x576?text=img" alt="img">
+                </a>
+                <a href="#">
+                    <h1>Sed ut perspiciatis unde omnis iste natus error sit</h1>
+                </a>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            </div>
+            <div class="middle-article">
+                <a href="#">
+                    <img src="https://via.placeholder.com/1024x576?text=img" alt="img">
+                </a>
+                <a href="#">
+                    <h1>Dolor facilisi praesent</h1>
+                </a>
+                <p>Amet, nisl nam sollicitudin nibh nam. Habitant venenatis, quisque. Penatibus
+                    imperdiet consequat donec nunc pellentesque. Justo cras non ad ridiculus viverra elit fames. Dictum
+                    cras pellentesque risus. Egestas nascetur.</p>
+            </div>
+        </div>
+        <div class="col-lg-3 g-0 order-lg-last order-last right">
+            <div class="right-above-overflow">
+                <h1>Le Flash</h1>
+
+                <div class="dropdown_menu" id="dropdown-menu">
+                    <button id="dropdown-buttons-container" type="button" onclick="dropDownListActuality()">
+                        <span class="dropdown-button-hidden dropdown-button-show"
+                              id="dropdown-button-actuality">
+                            Actualité
+                        </span>
+                        <span class="dropdown-button-hidden" id="dropdown-button-economy">
+                            Économie
+                        </span>
+                        <span class="dropdown-button-hidden" id="dropdown-button-sport">
+                            Sport
+                        </span>
+                        <img id="right-dropdown-arrow" src="./img/blue-arrow.png" alt="arrow">
+                    </button>
+                    <div class="dropdown-list-hidden" id="dropdown-list-actuality">
+                        <button class="button-economy" type="button" style="padding-bottom: 6px"
+                                onclick="dropDownListActuality(); showEconomy()">
+                            Économie
+                        </button>
+                        <button class="button-sport" type="button" onclick="dropDownListActuality(); showSport()">
+                            Sport
+                        </button>
+                    </div>
+                    <div class="dropdown-list-hidden" id="dropdown-list-economy">
+                        <button class="button-actuality" type="button" style="padding-bottom: 6px"
+                                onclick="dropDownListEconomy(); showActuality()">
+                            Actualité
+                        </button>
+                        <button class="button-sport" type="button" onclick="dropDownListEconomy(); showSport()">
+                            Sport
+                        </button>
+                    </div>
+                    <div class="dropdown-list-hidden" id="dropdown-list-sport">
+                        <button class="button-actuality" type="button" style="padding-bottom: 6px"
+                                onclick="dropDownListSport(); showActuality()">
+                            Actualité
+                        </button>
+                        <button class="button-economy" type="button" onclick="dropDownListSport(); showEconomy()">
+                            Économie
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="notifications-bar">
+                <p>Recevoir les alertes de la rédaction</p>
+                <button id="switch" type="button" onclick="enableNotifications()">
+                    <span id="switch-button"></span>
+                </button>
+            </div>
+            <div id="right-overflow" class="fog">
+                <div class="actuality-hidden actuality-show" id="actuality-banner">
+                    <div class="right-article">
+                        <p style="margin-right: 15px">19:37</p>
+                        <a href="#">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                            aliquet sem vitae mollis
+                            semper.
+                            Integer quis laoreet justo. Sed aliquet, nulla et rhoncus vestibulum, purus arcu convallis
+                            ligula,
+                            vel eleifend lacus turpis a nisi. Suspendisse mollis ligula id orci consectetur vestibulum.
+                            Proin
+                            blandit eget nulla nec consectetur. Pellentesque tincidunt diam a diam molestie, id
+                            scelerisque
+                            nibh
+                            scelerisque. Nulla dictum leo vitae ante mattis faucibus. Etiam sem eros, dictum ac
+                            malesuada
+                            et,
+                            lobortis sit amet lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut
+                            iaculis
+                            est felis, vel efficitur dolor maximus dignissim. Morbi est metus, suscipit placerat orci
+                            eu,
+                            suscipit aliquet nunc. Duis velit urna, scelerisque id turpis eu, fringilla volutpat enim.
+                            Aenean
+                            pharetra accumsan sapien, ornare sodales dolor lobortis porta. Etiam pharetra porta ex vel
+                            sollicitudin. Pellentesque a pulvinar arcu. Suspendisse non suscipit dui, non imperdiet
+                            ex.</a>
+                    </div>
+                    <div class="right-article">
+                        <p style="margin-right: 15px">17:42</p>
+                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                            aliquet sem vitae mollis
+                            semper.
+                            Integer quis laoreet justo. Sed aliquet, nulla et rhoncus vestibulum, purus arcu convallis
+                            ligula,
+                            vel eleifend lacus turpis a nisi.</a>
+                    </div>
+                    <div class="right-article">
+                        <p style="margin-right: 15px">16:36</p>
+                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Suspendisse
+                            aliquet sem vitae mollis
+                            semper.
+                            Integer quis laoreet justo. Sed aliquet, nulla et rhoncus vestibulum, purus arcu
+                            convallis
+                            ligula,
+                            vel eleifend lacus turpis a nisi.</a>
+                    </div>
+                </div>
+                <div class="economy-hidden" id="economy-banner">
+                    <div class="right-article">
+                        <p style="margin-right: 15px">18:19</p>
+                        <a href="#">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                            consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero
+                            eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate
+                            non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum
+                            et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+                            tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+                            placeat facere
+                        </a>
+                    </div>
+                    <div class="right-article">
+                        <p style="margin-right: 15px">15:22</p>
+                        <a href="#">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                            consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero
+                            eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate
+                            non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum
+                            et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+                            tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+                            placeat facere
+                        </a>
+                    </div>
+                </div>
+
+                <div class="sport-hidden" id="sport-banner">
+                    <div class="right-article">
+                        <p style="margin-right: 15px">17:53</p>
+                        <a href="#">
+                            Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por
+                            scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in
+                            li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite
+                            de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser
+                            necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues
+                            coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del
+                            coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent
+                            Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A
+                            un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que
+                            Occidental es. Li Europan lingues es membres del sam familie. Lor separat existentie es un
+                            myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe
+                            solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al
+                            desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At
+                            solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma
+                            quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam
+                            ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li
+                            existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser
+                            Occidental. A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge
+                            amico dit me que Occidental es.Li Europan lingues es membres del sam familie. Lor separat
+                            existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular.
+                            Li lingues differe solmen in li grammatica, li pronunciation
+                        </a>
+                    </div>
+                    <div class="right-article">
+                        <p style="margin-right: 15px">11:20</p>
+                        <a href="#">
+                            Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por
+                            scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in
+                            li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite
+                            de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser
+                            necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues
+                            coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del
+                            coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent
+                            Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A
+                            un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que
+                            Occidental es. Li Europan lingues es membres del sam familie. Lor separat existentie es un
+                            myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe
+                            solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al
+                            desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At
+                            solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma
+                            quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam
+                            ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li
+                            existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser
+                            Occidental. A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge
+                            amico dit me que Occidental es.Li Europan lingues es membres del sam familie. Lor separat
+                            existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular.
+                            Li lingues differe solmen in li grammatica, li pronunciation
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="all-flash-news-banner">
+                <a href="#">
+
+                    Voir tous les flashs actualité
+
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script title="close when clicking outside">
+    window.onclick = function (event) {
+        if (event.target instanceof Element) {
+            if (!event.target.matches("#dropdown-buttons-container") && document.getElementById("dropdown-menu").classList.contains("dropdown_menu-extended")) {
+                document.getElementById("dropdown-menu").classList.remove("dropdown_menu-extended");
+                document.getElementById("right-dropdown-arrow").classList.remove("rotate-arrow");
+                const closeMenu = document.getElementsByClassName("dropdown-list-show");
+                for (const i of closeMenu) {
+                    i.classList.remove("dropdown-list-show");
+                }
+            }
+            if (!event.target.matches("#main-page-dropdown-button") &&
+                !event.target.matches("#main-page-dropdown-container") &&
+                !event.target.matches("#dropdown-main-page-menu") &&
+                document.getElementById("main-page-dropdown-container").classList.contains("dropdown-main-page-container-show")) {
+                document.getElementById("main-page-dropdown-container").classList.remove("dropdown-main-page-container-show");
+                document.getElementById("lower-banner-arrow").classList.remove("flip-arrow");
+                document.getElementById("black-screen").classList.remove("black-screen-show");
+                document.body.style.overflow = "auto";
+                document.getElementById("black-screen").style.pointerEvents = null;
+            }
+            let rect = document.getElementById("menu-container").getBoundingClientRect();
+            if (!event.target.matches(".mid-banner-menu") && document.getElementById("menu-container").classList.contains("menu-container-show")) {
+                if (rect.y > event.clientY || event.clientY > rect.y + rect.height ||
+                    event.clientX > document.getElementById("menu-container").clientWidth) {
+                    document.getElementById("menu-container").classList.remove("menu-container-show");
+                    document.body.style.overflow = "auto";
+                    document.getElementById("page").style.pointerEvents = "auto";
+                }
+            }
+        }
+    }
+</script>
+<script title="right part dropdown menu">
+    function showActuality() {
+        document.getElementById("dropdown-button-sport").classList.remove("dropdown-button-show");
+        document.getElementById("dropdown-button-economy").classList.remove("dropdown-button-show");
+        document.getElementById("economy-banner").classList.remove("economy-show");
+        document.getElementById("sport-banner").classList.remove("sport-show");
+        document.getElementById("actuality-banner").classList.add("actuality-show");
+        document.getElementById("dropdown-button-actuality").classList.add("dropdown-button-show");
+        document.getElementById("dropdown-buttons-container").setAttribute("onclick", "dropDownListActuality()");
+    }
+
+    function showEconomy() {
+        document.getElementById("dropdown-button-sport").classList.remove("dropdown-button-show");
+        document.getElementById("dropdown-button-actuality").classList.remove("dropdown-button-show");
+        document.getElementById("actuality-banner").classList.remove("actuality-show");
+        document.getElementById("sport-banner").classList.remove("sport-show");
+        document.getElementById("economy-banner").classList.add("economy-show");
+        document.getElementById("dropdown-button-economy").classList.add("dropdown-button-show");
+        document.getElementById("dropdown-buttons-container").setAttribute("onclick", "dropDownListEconomy()");
+    }
+
+    function showSport() {
+        document.getElementById("dropdown-button-economy").classList.remove("dropdown-button-show");
+        document.getElementById("dropdown-button-actuality").classList.remove("dropdown-button-show");
+        document.getElementById("actuality-banner").classList.remove("actuality-show");
+        document.getElementById("economy-banner").classList.remove("economy-show");
+        document.getElementById("sport-banner").classList.add("sport-show");
+        document.getElementById("dropdown-button-sport").classList.add("dropdown-button-show");
+        document.getElementById("dropdown-buttons-container").setAttribute("onclick", "dropDownListSport()");
+    }
+
+    function dropDownListActuality() {
+        document.getElementById("dropdown-list-actuality").classList.toggle("dropdown-list-show");
+        document.getElementById("dropdown-menu").classList.toggle("dropdown_menu-extended");
+        document.getElementById("right-dropdown-arrow").classList.toggle("rotate-arrow");
+    }
+
+    function dropDownListEconomy() {
+        document.getElementById("dropdown-list-economy").classList.toggle("dropdown-list-show");
+        document.getElementById("dropdown-menu").classList.toggle("dropdown_menu-extended");
+        document.getElementById("right-dropdown-arrow").classList.toggle("rotate-arrow");
+    }
+
+    function dropDownListSport() {
+        document.getElementById("dropdown-list-sport").classList.toggle("dropdown-list-show");
+        document.getElementById("dropdown-menu").classList.toggle("dropdown_menu-extended");
+        document.getElementById("right-dropdown-arrow").classList.toggle("rotate-arrow");
+    }
+</script>
+<script title="enable/disable notifications">
+    function enableNotifications() {
+        if (!("Notification" in window)) {
+            alert("Notifications are not supported");
+        } else {
+            if (Notification.permission === "granted") {
+                new Notification("Notifications turned on", {
+                    icon: "https://via.placeholder.com/24x24"
+                });
+                document.getElementById("switch").classList.add("switch-on");
+                document.getElementById("switch-button").classList.add("notifications-on");
+            } else {
+                if (Notification.permission !== "denied") {
+                    Notification.requestPermission().then(function (permission) {
+                        if (permission === "granted") {
+                            new Notification("Notifications turned on", {
+                                icon: "https://via.placeholder.com/24x24"
+                            });
+                            document.getElementById("switch").classList.add("switch-on");
+                            document.getElementById("switch-button").classList.add("notifications-on");
+                        }
+                    });
+                }
+            }
+        }
+        document.getElementById("switch").setAttribute("onclick", "disableNotifications()");
+    }
+
+    function disableNotifications() {
+        new Notification("Notifications turned off", {
+            icon: "https://via.placeholder.com/24x24"
+        });
+        document.getElementById("switch").classList.remove("switch-on");
+        document.getElementById("switch-button").classList.remove("notifications-on");
+        document.getElementById("switch").setAttribute("onclick", "enableNotifications()");
+    }
+
+</script>
+<script title="scrollbar">
+    const scrollBar = document.getElementById("right-overflow");
+    scrollBar.addEventListener("scroll", function () {
+        if (Math.abs(scrollBar.scrollHeight - scrollBar.scrollTop - scrollBar.offsetHeight) <= 2)
+            scrollBar.classList.add("hidden");
+        else
+            scrollBar.classList.remove("hidden");
+    });
+
+</script>
+<script title="local editions">
+    function toggleLocalEditionsDropdownMenu() {
+        document.getElementById("main-page-dropdown-container").classList.toggle("dropdown-main-page-container-show");
+        document.getElementById("lower-banner-arrow").classList.toggle("flip-arrow");
+        document.getElementById("black-screen").classList.toggle("black-screen-show");
+        if (document.getElementById("black-screen").style.pointerEvents !== null)
+            document.getElementById("black-screen").style.pointerEvents = null;
+        else
+            document.getElementById("black-screen").style.pointerEvents = "none";
+        if (document.body.style.overflow !== "hidden")
+            document.body.style.overflow = "hidden";
+        else
+            document.body.style.overflow = "auto";
+    }
+</script>
+<script title="discover our sites">
+    function toggleDiscoverOurSites() {
+        document.getElementById("upper-dropdown-container").classList.toggle("upper-dropdown-container-show");
+        document.getElementById("upper-banner-arrow").classList.toggle("flip-arrow");
+        document.getElementById("page").classList.toggle("main-page-hidden-show");
+        document.querySelector("footer").classList.toggle("footer-show");
+    }
+</script>
+<script title="side menu">
+    function resize() {
+        let upperBannerHeight = document.getElementById("banner").clientHeight;
+        let stickyBannerHeight = document.getElementById("sticky-bottom-container").clientHeight;
+        let sideMenuHeight = window.innerHeight - upperBannerHeight - stickyBannerHeight;
+        let blackScreenHeight = window.innerHeight - upperBannerHeight;
+        const stylesheet1 = document.styleSheets[1];
+        const idToEdit = [...stylesheet1.cssRules].find(
+            (r) => r.selectorText === "#menu-container"
+        );
+        idToEdit.style.setProperty("height", sideMenuHeight.toString() + "px");
+        const stylesheet2 = document.styleSheets[0];
+        const classToEdit = [...stylesheet2.cssRules].find(
+            (r) => r.selectorText === ".black-screen-hidden"
+        );
+        classToEdit.style.setProperty("height", blackScreenHeight.toString() + "px");
+        classToEdit.style.setProperty("top", upperBannerHeight.toString() + "px");
+    }
+
+    document.addEventListener('DOMContentLoaded', resize);
+    window.addEventListener('resize', resize);
+
+    function toggleSideMenu() {
+        document.getElementById("menu-container").classList.toggle("menu-container-show");
+        if (document.getElementById("page").style.pointerEvents !== "none")
+            document.getElementById("page").style.pointerEvents = "none";
+        if (document.body.style.overflow !== "hidden")
+            document.body.style.overflow = "hidden";
+        else
+            document.body.style.overflow = "auto";
+    }
+</script>
+
+</body>
+
+<footer class="footer-hidden footer-show">
+    <div class="container-lg container-md container-sm container">
+        <div class="row" id="upper-division">
+            <div class="col-lg-3 col-sm-12 g-0" id="left-col">
+                <h1 class="footer-header">Nos liens utiles</h1>
+                <a href="#" class="footer-text">
+                    <img class="footer-arrow" src="img/white-arrow-png-41944.png" alt="arrow">
+                    Nos applications mobiles
+                </a>
+                <a href="#" class="footer-text">
+                    <img class="footer-arrow" src="img/white-arrow-png-41944.png" alt="arrow">
+                    Les vidéos Figaro Live
+                </a>
+                <a href="#" class="footer-text">
+                    <img class="footer-arrow" src="img/white-arrow-png-41944.png" alt="arrow">
+                    Les podcasts du Figaro
+                </a>
+                <a href="#" class="footer-text">
+                    <img class="footer-arrow" src="img/white-arrow-png-41944.png" alt="arrow">
+                    Les programmes TV
+                </a>
+                <a href="#" class="footer-text">
+                    <img class="footer-arrow" src="img/white-arrow-png-41944.png" alt="arrow">
+                    Les résultats sportifs
+                </a>
+                <a href="#" class="footer-text">
+                    <img class="footer-arrow" src="img/white-arrow-png-41944.png" alt="arrow">
+                    Carnet du jour
+                </a>
+                <a href="#" class="footer-text">
+                    <img class="footer-arrow" src="img/white-arrow-png-41944.png" alt="arrow">
+                    Figaro Store
+                </a>
+                <a href="#" class="footer-text">
+                    <img class="footer-arrow" src="img/white-arrow-png-41944.png" alt="arrow">
+                    Le Figaro Bordeaux
+                </a>
+                <a href="#" class="footer-text">
+                    <img class="footer-arrow" src="img/white-arrow-png-41944.png" alt="arrow">
+                    Le Figaro Lyon
+                </a>
+                <a href="#" class="footer-text">
+                    <img class="footer-arrow" src="img/white-arrow-png-41944.png" alt="arrow">
+                    Le Figaro Nantes
+                </a>
+                <a href="#" class="footer-text">
+                    <img class="footer-arrow" src="img/white-arrow-png-41944.png" alt="arrow">
+                    Le Figaro Nice
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-12 g-0" id="mid-col1">
+                <div class="row g-0" id="journal-kiosk">
+                    <div class="col-auto g-0" style="width: 130px;">
+                        <img src="https://via.placeholder.com/124x184?text=journal-img" alt="journal-img">
+                    </div>
+                    <div class="col-auto g-0" id="image-text">
+                        <h1 class="footer-header" style="margin-bottom: 5px;">Le Kiosque</h1>
+                        <p class="footer-text" style="margin-bottom: 5px;">Le Figaro</p>
+                        <button type="button">
+                            <a href="#" class="footer-text">
+                                LIRE CE NUMÉRO
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 g-0" id="mid-col2">
+                <div id="subscribe">
+                    <h1 class="footer-header">Abonnement</h1>
+                    <a href="#" style="margin-bottom: 10px;">
+                        <img class="footer-arrow" style="transform: rotate(0);" src="./img/right-arrow.png"
+                             alt="right-arrow">
+                        <span class="footer-text">Découvrez toutes les offres</span>
+                    </a>
+                    <p class="footer-text" style="margin-bottom: 10px;">Les articles en illimité à partir de 0,99€ sans
+                        engagement</p>
+                    <a href="#">
+                        <img class="footer-arrow" style="transform: rotate(0);" src="./img/right-arrow.png"
+                             alt="right-arrow">
+                        <span class="footer-text">Gérer votre abonnement</span>
+                    </a>
+                    <a href="#">
+                        <img class="footer-arrow" style="transform: rotate(0);" src="./img/right-arrow.png"
+                             alt="right-arrow">
+                        <span class="footer-text">Espace personnel</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 g-0" id="right-col">
+                <div id="mobile-applications">
+                    <h1 class="footer-header">Applications mobiles</h1>
+                    <div class="footer-text">
+                        <img style="margin-right: 5px;" src="https://via.placeholder.com/20x20.png?text="
+                             alt="application-icon">
+                        <span style="font-weight: 650">Le Figaro: </span>
+                        <a href="#">
+                            iPhone
+                        </a>
+                        <span> | </span>
+                        <a href="#">
+                            Android
+                        </a>
+                    </div>
+                    <div class="footer-text">
+                        <img style="margin-right: 5px;" src="https://via.placeholder.com/20x20.png?text="
+                             alt="application-icon">
+                        <span style="font-weight: 650">Le Figaro Jeux: </span>
+                        <a href="#">
+                            iPhone
+                        </a>
+                        <span> | </span>
+                        <a href="#">
+                            Android
+                        </a>
+                    </div>
+                    <div class="footer-text">
+                        <img style="margin-right: 5px;" src="https://via.placeholder.com/20x20.png?text="
+                             alt="application-icon">
+                        <span style="font-weight: 600">Le Kiosque Le Figaro: </span>
+                        <a href="#">
+                            iPhone
+                        </a>
+                        <span> | </span>
+                        <a href="#">
+                            Android
+                        </a>
+                    </div>
+                    <div class="footer-text" style="margin-bottom: 20px">
+                        <img style="margin-right: 5px;" src="https://via.placeholder.com/20x20.png?text="
+                             alt="application-icon">
+                        <span style="font-weight: 650">Le Figaro Cuisine: </span>
+                        <a href="#">
+                            iPhone
+                        </a>
+                        <span> | </span>
+                        <a href="#">
+                            Android
+                        </a>
+                    </div>
+                </div>
+                <div id="newsletter" style="margin-bottom: 20px">
+                    <h1 class="footer-header">Nos newsletters</h1>
+                    <a href="#" class="footer-text">
+                        <img id="mail-icon" style="filter: invert(1)" src="img/mail.png" alt="mail-icon">
+                        Inscrivez-vous aux newsletters
+                    </a>
+                </div>
+                <div id="social-medias">
+                    <h1 class="footer-header">Suivez-nous sur</h1>
+                    <div id="social-media-icons">
+                        <img style="margin-right: 10px;" src="https://via.placeholder.com/24x24.png?text="
+                             alt="social-media-icon">
+                        <img style="margin-right: 10px;" src="https://via.placeholder.com/24x24.png?text="
+                             alt="social-media-icon">
+                        <img style="margin-right: 10px;" src="https://via.placeholder.com/24x24.png?text="
+                             alt="social-media-icon">
+                        <img src="https://via.placeholder.com/24x24.png?text=" alt="social-media-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-0 footer-text" id="lower-division">
+            <a class="col-auto g-0 lower-footer-text" href="#">Paramétrer les cookies</a>
+            <a class="col-auto g-0 lower-footer-text" href="#">Plan du site</a>
+            <a class="col-auto g-0 lower-footer-text" href="#">Confidentialité</a>
+            <a class="col-auto g-0 lower-footer-text" href="#">CGU</a>
+            <a class="col-auto g-0 lower-footer-text" href="#">CGV</a>
+            <a class="col-auto g-0 lower-footer-text" href="#">Info cookies</a>
+            <a class="col-auto g-0 lower-footer-text" href="#">Charte</a>
+            <a class="col-auto g-0 lower-footer-text" href="#">Aide et contact</a>
+            <a class="col-auto g-0 lower-footer-text" href="#">Mentions légales</a>
+            <a class="col-auto g-0 lower-footer-text" href="#">Abonnements</a>
+            <a class="col-auto g-0 lower-footer-text" href="#">Newsletter</a>
+            <a class="col-auto g-0 lower-footer-text" href="#">Publicité</a>
+            <a class="col-auto g-0 lower-footer-text" href="#">Sitemap</a>
+        </div>
+
+        <div id="icon-tags">
+            <h1 class="footer-header">Attributions</h1>
+            <div class="row g-0" id="icon-tags-row">
+                <a class="col-auto g-0 icon-ref" href="https://www.iconsdb.com/custom-color/search-13-icon.html"
+                   target="_blank">
+                    <img class=" icon-tag-img" src="./img/search-13-512.png" alt="lens">
+                </a>
+                <a class="col-auto g-0 icon-ref" href="https://www.freeiconspng.com/img/41944" target="_blank">
+                    <img class=" icon-tag-img" src="./img/white-arrow-png-41944.png" alt="arrow">
+                </a>
+                <a class="col-auto g-0 icon-ref"
+                   href="https://www.flaticon.com/free-icon/right-arrow_892662?term=arrow&page=1&position=50&origin=search&related_id=892662"
+                   target="_blank">
+                    <img class="icon-tag-img" src="./img/right-arrow.png" alt="right-arrow">
+                </a>
+                <a class="col-auto g-0 icon-ref" href="https://www.freeiconspng.com/img/6687"
+                   target="_blank">
+                    <img class="icon-tag-img" src="img/arrow-down-icon-png-6687.png" alt="arrow">
+                </a>
+                <a class="col-auto g-0 icon-ref"
+                   href="https://www.flaticon.com/free-icon/home_9959431?term=homepage&page=1&position=12&origin=search&related_id=9959431"
+                   target="_blank">
+                    <img class="icon-tag-img" src="./img/home1.png" alt="home">
+                </a>
+                <a class="col-auto g-0 icon-ref"
+                   href="https://www.flaticon.com/free-icon/bookmark_3082331?term=favorite&page=1&position=15&origin=search&related_id=3082331"
+                   target="_blank">
+                    <img class="icon-tag-img" src="./img/bookmark1.png" alt="bookmark">
+                </a>
+                <a class="col-auto g-0 icon-ref"
+                   href="https://www.flaticon.com/free-icon/clock_992700?term=clock&page=1&position=7&origin=search&related_id=992700"
+                   target="_blank">
+                    <img class="icon-tag-img" src="./img/clock1.png" alt="clock">
+                </a>
+                <a class="col-auto g-0 icon-ref"
+                   href="https://www.flaticon.com/free-icon/mail_646094?term=email&page=1&position=4&origin=search&related_id=646094"
+                   target="_blank">
+                    <img class="icon-tag-img" src="./img/mail.png" alt="mail">
+                </a>
+            </div>
+            <p class="footer-text" style="font-size: min(10px, 5vw); margin: 0; padding: 0;">Thanks to <cite><a
+                    href="https://betterplaceholder.com/" target="_blank">Better Placeholder</a></cite>
+                for the image generation</p>
+        </div>
+    </div>
+
+
+</footer>
+<div class="container-fluid" id="sticky-bottom-container">
+    <div class="sticky-bottom-left">
+        <a href="#">
+            <img src="./img/bookmark.png" alt="bookmark">
+            <p>La sélection</p>
+        </a>
+    </div>
+    <div class="sticky-bottom-middle">
+        <a href="#">
+            <img src="./img/home.png" alt="home">
+            <p>À la Une</p>
+        </a>
+    </div>
+    <div class="sticky-bottom-right">
+        <a href="#">
+            <img src="./img/clock.png" alt="clock">
+            <p>Le flash</p>
+        </a>
+    </div>
+</div>
+</html>
